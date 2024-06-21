@@ -997,10 +997,215 @@ a:focus {
   color: #007bff;
 }
 
-.image3 {
-  height: 80%;
-  width: 80%;
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
 }
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal_img {
+  width: 100%;
+  height: auto;
+}
+
+.modal_description {
+  margin-top: 20px;
+}
+
+/* Team member styles */
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal_body {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.modal_img {
+  width: 50%;
+  height: auto;
+}
+
+.modal_description {
+  width: 50%;
+}
+
+/* Team member styles */
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal_body {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.modal_img {
+  width: 50%;
+  height: auto;
+}
+
+.modal_description {
+  width: 50%;
+}
+
+/* Team member styles */
+.team_member .img-box-t {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.team_member .team_img-t {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.team_member:hover .team_img-t {
+  transform: scale(1.1);
+}
+
+/* Grid layout for team members */
+.team_row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team_row .col-lg-4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  padding: 15px;
+}
+
+@media (max-width: 767.98px) {
+  .team_row .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .team_row .col-sm-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+
 
 
 
