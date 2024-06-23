@@ -127,7 +127,7 @@ a:focus {
 
 .sub_page .hero_area {
   min-height: auto;
-  background: linear-gradient(130deg, #404B69, #283149);
+  background: linear-gradient(130deg, #241474,#04044c);
 }
 
 .sub_page .hero_area .hero_bg_box {
@@ -493,7 +493,7 @@ a:focus {
 }
 
 .about_section {
-  background-color: #283149;
+  background-color: #04044c;
   color: #ffffff;
   padding: 60px 0;
 }
@@ -620,7 +620,7 @@ a:focus {
 /*team section */
 .team_section {
   text-align: center;
-  background-color: #283149;
+  background-color: #04044c;
   color: #ffffff;
   padding: 60px 0;
 }
@@ -795,7 +795,8 @@ a:focus {
 
 /* client section end */
 .info_section {
-  background-color: #283149;
+  background-color: 
+#06014b;
   color: #ffffff;
   padding: 45px 0 15px 0;
 }
