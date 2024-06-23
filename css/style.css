@@ -495,6 +495,7 @@ a:focus {
 .about_section {
   background-color: #283149;
   color: #ffffff;
+  padding: 60px 0;
 }
 
 .about_section .heading_container {
@@ -506,9 +507,16 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
 }
-
+.about_section .img-box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 .about_section .img-box img {
   max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .about_section .detail-box h3 {
@@ -614,6 +622,7 @@ a:focus {
   text-align: center;
   background-color: #283149;
   color: #ffffff;
+  padding: 60px 0;
 }
 
 .team_section .heading_container {
@@ -653,6 +662,7 @@ a:focus {
   width: 120px;
   border-radius: 100%;
   border: 5px solid #ffffff;
+  display: block;
 }
 
 .team_section .team_container .box .detail-box {
@@ -957,7 +967,9 @@ a:focus {
 .team_row {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: flex-start;
 }
+
 .img-box {
   width: 100%;
   height: 200px;
@@ -1162,10 +1174,38 @@ a:focus {
 }
 
 /* Team member styles */
+.team_member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.team_member:hover {
+  transform: translateY(-10px);
+}
+
 .team_member .img-box-t {
+  width: 100%;
+  padding-bottom: 100%;
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.team_img-t {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .team_member .team_img-t {
@@ -1180,7 +1220,8 @@ a:focus {
 /* Grid layout for team members */
 .team_row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
 }
 
 .team_row .col-lg-4 {
@@ -1188,6 +1229,12 @@ a:focus {
   max-width: 33.3333%;
   padding: 15px;
 }
+
+.team_row .col-lg-3 {
+  flex: 0 0 auto;
+  max-width: 25%;
+}
+
 
 @media (max-width: 767.98px) {
   .team_row .col-sm-6 {
@@ -1203,6 +1250,18 @@ a:focus {
   }
 }
 
+/*index.html scroll container for teams */
+/* Container for horizontal scrolling */
+.scroll_container {
+  overflow-x: auto;
+  white-space: nowrap;
+  cursor: grab;
+}
+
+/* Disable scrollbars */
+.scroll_container::-webkit-scrollbar {
+  display: none;
+}
 
 
 
