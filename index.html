@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Mobile View -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+ 
+
+  <!-- Font style -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+  </style>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #DBEDF3;
+    }
+    .navbar {
+      background-color: #283149;
+    }
+    .navbar-nav .nav-link {
+      color: #DBEDF3 !important;
+      margin-right: 1.25rem;
+    }
+    .navbar-nav .nav-link:hover, 
+    .navbar-nav .nav-link.active {
+      color: #F73859 !important;
+    }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+    .navbar-brand img {
+      margin-right: 0.625rem; /* Space between logo and brand name */
+    }
+    .container-fluid {
+      max-width: 75rem; /* Center container and set max width */
+      margin: 0 auto;
+    }
+    .navbar-toggler {
+      border: none;
+    }
+    .navbar-toggler-icon {
+      color: #DBEDF3; /* Color of the toggler icon */
+      background-image: none; /* Remove the default background image */
+    }
+    .navbar-toggler-icon:after {
+      content: '\2630'; /* Unicode character for the hamburger icon */
+      font-size: 1.25rem; /* Size of the hamburger icon */
+      color: #DBEDF3; /* Color of the hamburger icon */
+    }
+
+    /* Hero section */
+    .hero-section {
+      position: relative;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+      height: 80vh;
+      font-family: 'Montserrat';
+    }
+    .hero-section img {
+      width: 50%;
+      height: 65vh;
+      object-fit: cover;
+    }
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: #283149;
+      font-weight: 600;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+      color: #404B69;
+      font-weight: 400;
+    }
+    .hero-content .btn {
+      background-color: #F73859;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 25px;
+    }
+    .hero-content .btn:hover {
+      background-color: #f55374;
+    }
+
+    /* Tech Floating around */
+    .tech-float {
+      overflow: hidden;
+      background-color: #283149; /* Background color of the section */
+      padding: 20px 0;
+      height: 20vh;
+    }
+    .tech-float .container {
+      display: flex;
+      animation: float 15s linear infinite;
+    }
+    .tech-float .col img {
+      height: auto;
+      width: 7vw;
+      padding: 0 3.5vw 3.5vw 0;
+    }
+    @keyframes float {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 100%) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      .hero-content p {
+        font-size: 1rem;
+      }
+      .hero-content .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+      .tech-float .col img {
+        width: 10vw;
+      }
+    }
+
+    @media (max-width: 75%) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      .hero-content p {
+        font-size: 0.9rem;
+      }
+      .hero-content .btn {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+      }
+      .tech-float .col img {
+        width: 10vw;
+      }
+    }
+
+    @media (max-width: 30%) {
+      .hero-content h1 {
+        font-size: 1.5rem;
+      }
+      .hero-content p {
+        font-size: 0.8rem;
+      }
+      .hero-content .btn {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+      }
+      .tech-float .col img {
+        width: 20vw;
+      }
+    }
+
+    /* Service section */
+
+    .service_heading {
+      font-weight: bold;
+      font-family: 'Montserrat';
+      color: #283149;
+    }
+
+    hr {
+      margin: 5dvh auto;
+      border-width: 2px;
+      color: #283149;
+      background-color: #283149;
+    }
+    .footer {
+      background-color: rgba(219, 237, 243, 0.7);
+      border-radius: 0 0 45px 45px;
+      width: 100%;
+    }
+    .card-icon {
+      font-size: 5rem;
+      color: #404B69;
+    }
+    .card-text {
+      color: #283149;
+      font-weight: bold;
+      font-family: 'Montserrat';
+      
+    }
+    .card-img-top {
+      border-radius: 45px 45px 45px 45px;
+    }
+    .card {
+      background: none;
+      border: none;
+      border-radius: 45px 45px 45px 45px;
+      box-shadow: 2px 2px 7.1px #283149;
+    }
+  </style>
+  <title>Hiiiive</title>
+</head>
+<body>
+  <!-- Nav Bar Section -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="images/hiiiive_transparent.png" alt="Logo" width="50" height="30" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Why Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Team</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End of Nav Bar -->
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <img src="images/hero-image.png" alt="Hero Image">
+    <div class="hero-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 text-lg-start text-center">
+            <h1>Welcome to HIVE</h1>
+            <p>Key to the future</p>
+            <a href="#" class="btn">Start with us</a>
+          </div>
+          <div class="col-lg-6 text-lg-end text-center">
+            <h1>Full stack developer's</h1>
+            <p>coding solution to your business</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Hero Section -->
+
+  <!-- Technology Section -->
+  <div class="tech-float">
+    <div class="container">
+      <div class="row">
+        <div class="col"><img src="images/stumbleupon.png" alt="Django" class="django"></div>
+        <div class="col"><img src="images/html.png" alt="HTML" class="html"></div>
+        <div class="col"><img src="images/css.png" alt="CSS" class="css"></div>
+        <div class="col"><img src="images/js.png" alt="JavaScript" class="js"></div>
+        <div class="col"><img src="images/ps.png" alt="Photoshop" class="ps"></div>
+        <div class="col"><img src="images/illustrator.png" alt="Illustrator" class="ai"></div>
+        <div class="col"><img src="images/wordpress.png" alt="WordPress" class="wp"></div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Technology Section -->
+
+  <!-- introduction section -->
+
+  <!-- Service Section -->
+  <div class="p-3" style="background-color: #DBEDF3;">
+    <div class="container p-3">
+      <p class="h1 text-center service_heading">Our <span style="color: #F73859;">Services</span></p>
+      <hr>
+    </div>
+
+    <div class="container p-5">
+      <div class="row g-5">
+        <!-- First row of cards -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="card">
+            <img class="card-img-top" src="images/card_2.png" alt="Card image cap">
+            <div class="card-img-overlay d-flex flex-column justify-content-end p-0">
+              <center><i class="bi bi-code-slash card-icon"></i></center>
+              <div class="footer text-center">
+                <p class="card-text m-0 p-2">Full-stack <br>Development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="card">
+            <img class="card-img-top" src="images/card_2.png" alt="Card image cap">
+            <div class="card-img-overlay d-flex flex-column justify-content-end p-0">
+              <center><i class="bi bi-code-slash card-icon"></i></center>
+              <div class="footer text-center">
+                <p class="card-text m-0 p-2">Full-stack <br>Development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="card">
+            <img class="card-img-top" src="images/card_2.png" alt="Card image cap">
+            <div class="card-img-overlay d-flex flex-column justify-content-end p-0">
+              <center><i class="bi bi-code-slash card-icon"></i></center>
+              <div class="footer text-center">
+                <p class="card-text m-0 p-2">Full-stack <br>Development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4 mt-4">
+        <!-- Second row of cards -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="card">
+            <img class="card-img-top" src="images/card_2.png" alt="Card image cap">
+            <div class="card-img-overlay d-flex flex-column justify-content-end p-0">
+              <center><i class="bi bi-code-slash card-icon"></i></center>
+              <div class="footer text-center">
+                <p class="card-text m-0 p-2">Full-stack <br>Development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="card">
+            <img class="card-img-top" src="images/card_2.png" alt="Card image cap">
+            <div class="card-img-overlay d-flex flex-column justify-content-end p-0">
+              <center><i class="bi bi-code-slash card-icon"></i></center>
+              <div class="footer text-center">
+                <p class="card-text m-0 p-2">Full-stack <br>Development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="card">
+            <img class="card-img-top" src="images/card_2.png" alt="Card image cap">
+            <div class="card-img-overlay d-flex flex-column justify-content-end p-0">
+              <center><i class="bi bi-code-slash card-icon"></i></center>
+              <div class="footer text-center">
+                <p class="card-text m-0 p-2">Full-stack <br>Development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Service Section -->
+</body>
+</html>
